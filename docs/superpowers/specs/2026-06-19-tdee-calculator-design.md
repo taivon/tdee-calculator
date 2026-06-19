@@ -178,7 +178,7 @@ Invalid inputs show inline hints. Results display "—" until all required field
 
 ### Unit handling
 
-All internal math uses metric. Imperial inputs convert on entry. Unit toggle lives in the Advanced panel; default is imperial for US audience (configurable).
+All internal math uses metric. Imperial inputs convert on entry. Unit toggle lives in the Advanced panel; **default display unit: metric** (cm / kg).
 
 ## AdSense & Monetization
 
