@@ -3,6 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Free TDEE calculator — estimate your daily calorie needs for weight loss, maintenance, or muscle gain."
+    />
+    <meta property="og:title" content="TDEE Calculator" />
+    <meta
+      property="og:description"
+      content="Calculate your Total Daily Energy Expenditure with our free, accurate calculator."
+    />
+    <meta property="og:type" content="website" />
     <title>TDEE Calculator</title>
   </head>
   <body>
@@ -13,6 +23,7 @@
           <ul class="site-nav">
             <li><a href="#calculator">Calculator</a></li>
             <li><a href="#faq">FAQ</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
           </ul>
         </nav>
       </div>
@@ -21,17 +32,144 @@
     <section class="hero">
       <div class="container">
         <h1>Calculate Your Daily Calorie Needs</h1>
-        <p>Estimate your Total Daily Energy Expenditure for weight loss, maintenance, or muscle gain.</p>
+        <p>
+          Estimate your Total Daily Energy Expenditure for weight loss, maintenance, or muscle gain.
+        </p>
       </div>
     </section>
 
     <main>
-      <div id="app" class="container"></div>
+      <section id="calculator" class="content-section">
+        <div class="container">
+          <div id="calculator-app"></div>
+        </div>
+      </section>
+
+      <div class="container">
+        <div class="ad-slot" data-ad-slot="banner-1" aria-hidden="true"></div>
+      </div>
+
+      <section class="content-section">
+        <div class="container">
+          <h2>What is TDEE?</h2>
+          <p>
+            Total Daily Energy Expenditure (TDEE) is the number of calories your body burns in a
+            typical day. It combines the energy needed to keep you alive at rest with the energy
+            you spend moving, exercising, and digesting food. Knowing your TDEE is the foundation
+            for setting calorie targets—whether you want to lose fat, maintain your weight, or
+            build muscle.
+          </p>
+          <p>
+            The largest piece of TDEE is your Basal Metabolic Rate (BMR)—the calories burned to
+            maintain basic functions like breathing, circulation, and cell repair while you are at
+            complete rest. BMR depends on your sex, age, height, and weight. Established formulas
+            such as Mifflin-St Jeor estimate BMR from these inputs; if you know your body fat
+            percentage, lean-mass formulas like Katch-McArdle can be more accurate for your
+            composition.
+          </p>
+          <p>
+            Daily activity adds the next layer. A desk job with little exercise burns far fewer
+            calories than a physically active lifestyle or regular training program. Activity
+            multipliers scale your BMR upward to reflect how often and how hard you move—from
+            sedentary through very active levels.
+          </p>
+          <p>
+            A smaller but real component is the Thermic Effect of Food (TEF)—energy used to digest,
+            absorb, and process what you eat. Protein has a higher TEF than carbohydrates or fat,
+            which is one reason balanced macro splits matter alongside total calories.
+          </p>
+          <p>
+            Put together: <strong>TDEE ≈ BMR × activity level</strong>, with TEF included in
+            practical estimates. Our calculator uses your inputs to estimate BMR, apply your
+            activity level, and suggest calorie targets for cutting, maintaining, or bulking—plus a
+            starting macro split to support your goal.
+          </p>
+        </div>
+      </section>
+
+      <div class="container">
+        <div class="ad-slot" data-ad-slot="in-article-1" aria-hidden="true"></div>
+      </div>
+
+      <section id="faq" class="content-section">
+        <div class="container">
+          <h2>Frequently Asked Questions</h2>
+
+          <details class="faq-item">
+            <summary class="faq-question">What is TDEE and how is it calculated?</summary>
+            <p>
+              TDEE (Total Daily Energy Expenditure) is the total calories you burn per day. We
+              estimate your Basal Metabolic Rate (BMR) from your sex, age, height, and weight,
+              then multiply by an activity factor that reflects how active you are. The result is
+              your estimated daily calorie needs before any intentional deficit or surplus.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">How accurate is this calculator?</summary>
+            <p>
+              Formula-based estimates are useful starting points, but individual metabolism varies
+              with genetics, hormones, sleep, stress, and medical conditions. Treat the number as
+              an educated estimate—track your weight and energy over two to four weeks and adjust
+              calories up or down based on real-world results.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Which formula should I use?</summary>
+            <p>
+              Mifflin-St Jeor is the default and works well for most people. If you know your body
+              fat percentage, Katch-McArdle (based on lean body mass) is often more accurate. The
+              advanced panel lets you compare multiple formulas side by side so you can see how
+              estimates differ for your stats.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">How do I pick the right activity level?</summary>
+            <p>
+              Choose the level that best describes your typical week—not your most intense day.
+              Sedentary fits a desk job with little exercise; Light covers one to three light
+              sessions per week; Moderate fits three to five moderate workouts; Active and Very
+              Active are for frequent hard training or physically demanding jobs. When in doubt,
+              start conservative and adjust calories based on progress.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">How many calories should I eat to lose weight?</summary>
+            <p>
+              A common approach is eating below your TDEE by about 500 calories per day, which
+              targets roughly one pound of fat loss per week for many people. Smaller deficits
+              (250 calories) are gentler and easier to sustain. Avoid very large deficits without
+              medical supervision—they can cost muscle, energy, and long-term adherence.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">What are macros and why do they matter?</summary>
+            <p>
+              Macronutrients—protein, carbohydrates, and fat—are the calorie-containing nutrients
+              in food. Protein supports muscle repair and satiety; carbs fuel training and daily
+              activity; fats support hormones and nutrient absorption. Total calories drive weight
+              change, but macro balance helps you feel better, perform in the gym, and preserve
+              lean mass while dieting.
+            </p>
+          </details>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
       <div class="container">
-        <p>Not medical advice. Consult a healthcare professional before changing your diet.</p>
+        <p>
+          This calculator provides estimates only. Consult a healthcare professional before making
+          dietary changes.
+        </p>
+        <p>
+          <a href="privacy.html">Privacy Policy</a>
+          · © <span id="year"></span> TDEE Calculator
+        </p>
       </div>
     </footer>
 

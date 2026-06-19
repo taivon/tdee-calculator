@@ -1,5 +1,6 @@
 import './styles/base.css';
 import './styles/layout.css';
+import { initFaqAccordion } from './ui/faq';
 
-/** Application entry point (placeholder). */
-document.querySelector<HTMLDivElement>('#app')!.textContent = 'TDEE Calculator';
+initFaqAccordion();
+document.getElementById('year')!.textContent = String(new Date().getFullYear());
