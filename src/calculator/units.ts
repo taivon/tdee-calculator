@@ -18,6 +18,36 @@ export function kgToLbs(kg: number): number {
   return kg / 0.45359237;
 }
 
+/** Feet and inches components of an imperial height. */
+export interface FeetInches {
+  /** Whole feet portion (e.g. 5 for 5'9"). */
+  feet: number;
+  /** Remaining inches (0–11). */
+  inches: number;
+}
+
+/**
+ * Combines feet and inches into total inches for BMR calculations.
+ * @param feet - Whole feet.
+ * @param inches - Inches portion (0–11).
+ */
+export function feetInchesToInches(feet: number, inches: number): number {
+  return feet * 12 + inches;
+}
+
+/**
+ * Splits total inches into feet and inches for imperial height inputs.
+ * @param totalInches - Height expressed as total inches.
+ */
+export function inchesToFeetInches(totalInches: number): FeetInches {
+  const feet = Math.floor(totalInches / 12);
+  const inches = Math.round(totalInches % 12);
+  if (inches === 12) {
+    return { feet: feet + 1, inches: 0 };
+  }
+  return { feet, inches };
+}
+
 /**
  * Normalizes height to centimeters based on the active unit system.
  * @param value - Height value as entered by the user.

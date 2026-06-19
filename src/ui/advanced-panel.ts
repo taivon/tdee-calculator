@@ -1,4 +1,4 @@
-import type { CalculatorInput, CalculatorResult, UnitSystem } from '../calculator/types';
+import type { CalculatorInput, CalculatorResult } from '../calculator/types';
 import { renderFormulaTable } from './results-panel';
 
 /** Controls returned by {@link renderAdvancedPanel}. */
@@ -22,14 +22,6 @@ export function renderAdvancedPanel(
     <details class="advanced-panel">
       <summary class="advanced-panel__summary">Advanced options</summary>
       <div class="advanced-panel__body">
-        <div class="form-field">
-          <span class="form-field__label">Units</span>
-          <div class="radio-group">
-            <label><input type="radio" name="unitSystem" value="metric" ${input.unitSystem === 'metric' ? 'checked' : ''} /> Metric (cm / kg)</label>
-            <label><input type="radio" name="unitSystem" value="imperial" ${input.unitSystem === 'imperial' ? 'checked' : ''} /> Imperial (in / lbs)</label>
-          </div>
-        </div>
-
         <div class="form-field">
           <label for="bodyFatPercent">Body fat % <span class="optional">(optional)</span></label>
           <input id="bodyFatPercent" type="number" inputmode="decimal" min="3" max="60" step="0.1" placeholder="e.g. 15" value="${input.bodyFatPercent}" />
@@ -87,7 +79,6 @@ export function renderAdvancedPanel(
   const formulaTableMount = mount.querySelector<HTMLElement>('#formula-table')!;
 
   const readAdvanced = (): void => {
-    input.unitSystem = panel.querySelector<HTMLInputElement>('input[name="unitSystem"]:checked')!.value as UnitSystem;
     input.bodyFatPercent = panel.querySelector<HTMLInputElement>('#bodyFatPercent')!.value;
     input.cutOffset = Number(panel.querySelector<HTMLInputElement>('#cutOffset')!.value);
     input.bulkOffset = Number(panel.querySelector<HTMLInputElement>('#bulkOffset')!.value);

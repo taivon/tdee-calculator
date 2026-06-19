@@ -50,7 +50,6 @@ const formControls = renderCalculatorForm(formColumn, input, (next) => {
 
 renderAdvancedPanel(advancedMount, input, (next) => {
   Object.assign(input, next);
-  formControls.updateUnitLabels(input.unitSystem);
   recalculate();
 });
 
