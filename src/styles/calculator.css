@@ -1,0 +1,319 @@
+/* Calculator card, form, and results */
+
+.calculator-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.calculator-card {
+  padding: var(--space-xl);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.calculator-form fieldset {
+  margin: 0 0 var(--space-lg);
+  padding: 0;
+  border: none;
+}
+
+.calculator-form legend,
+.form-field > label,
+.form-field__label {
+  display: block;
+  margin-bottom: var(--space-xs);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.form-field {
+  margin-bottom: var(--space-lg);
+}
+
+.form-field input[type='number'],
+.form-field select {
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font: inherit;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.form-field input[type='number']:focus,
+.form-field select:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 1px;
+}
+
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.radio-group label,
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: 0.9375rem;
+  cursor: pointer;
+}
+
+.validation-hint {
+  margin: var(--space-xs) 0 0;
+  font-size: 0.8125rem;
+  color: #b45309;
+}
+
+.field-hint {
+  margin: var(--space-xs) 0 0;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.optional {
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+.results-panel {
+  padding: var(--space-xl);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+}
+
+.results-panel--active {
+  border-top: 3px solid var(--color-text);
+}
+
+.results-label {
+  margin: 0 0 var(--space-xs);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.results-tdee {
+  margin: 0 0 var(--space-sm);
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--color-text);
+}
+
+.results-unit {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+.results-bmr {
+  margin: 0 0 var(--space-lg);
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.goal-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+}
+
+.goal-card {
+  padding: var(--space-md);
+  border-top: 2px solid var(--color-border);
+  text-align: center;
+}
+
+.goal-card--primary {
+  border-top-color: var(--color-text);
+  background: var(--color-accent-soft);
+  border-radius: var(--radius-sm);
+}
+
+.goal-card__label {
+  display: block;
+  margin-bottom: var(--space-xs);
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.goal-card__value {
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.macro-heading,
+.advanced-heading {
+  margin: 0 0 var(--space-md);
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+}
+
+.macro-bar {
+  display: flex;
+  height: 10px;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-md);
+}
+
+.macro-bar__segment--protein {
+  background: #7c9a6e;
+}
+
+.macro-bar__segment--fat {
+  background: #c4715a;
+}
+
+.macro-bar__segment--carb {
+  background: #8b7355;
+}
+
+.macro-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.macro-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: var(--space-xs);
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.macro-dot--protein { background: #7c9a6e; }
+.macro-dot--fat { background: #c4715a; }
+.macro-dot--carb { background: #8b7355; }
+
+.macro-empty,
+.formula-empty {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.advanced-panel {
+  margin-top: var(--space-lg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+}
+
+.advanced-panel__summary {
+  padding: var(--space-md) var(--space-lg);
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.advanced-panel__summary::-webkit-details-marker {
+  display: none;
+}
+
+.advanced-panel__body {
+  padding: 0 var(--space-lg) var(--space-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.advanced-panel input[type='range'] {
+  width: 100%;
+  accent-color: var(--color-accent);
+}
+
+.macro-sum--invalid {
+  color: #b45309;
+  font-weight: 600;
+}
+
+.formula-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.formula-table th,
+.formula-table td {
+  padding: var(--space-sm);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.formula-table__row--disabled td {
+  color: var(--color-text-muted);
+}
+
+.results-sticky {
+  position: sticky;
+  top: var(--space-lg);
+}
+
+.mobile-sticky-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: var(--space-sm) var(--space-lg);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--color-text);
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  box-shadow: 0 -2px 8px rgba(44, 36, 23, 0.08);
+}
+
+@media (max-width: 768px) {
+  .calculator-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .results-sticky {
+    position: static;
+  }
+
+  .mobile-sticky-bar:not([hidden]) {
+    display: block;
+  }
+
+  body {
+    padding-bottom: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .goal-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .calculator-card,
+  .results-panel {
+    padding: var(--space-lg);
+  }
+}
