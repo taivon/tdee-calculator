@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "prebuild": "node scripts/generate-ads-txt.mjs",
+    "build": "npm run prebuild && tsc && vite build",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest"

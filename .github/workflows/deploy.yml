@@ -25,6 +25,10 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run build
+        env:
+          VITE_ADSENSE_CLIENT: ${{ secrets.VITE_ADSENSE_CLIENT }}
+          VITE_ADSENSE_SLOT_BANNER: ${{ secrets.VITE_ADSENSE_SLOT_BANNER }}
+          VITE_ADSENSE_SLOT_IN_ARTICLE: ${{ secrets.VITE_ADSENSE_SLOT_IN_ARTICLE }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

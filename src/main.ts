@@ -4,6 +4,7 @@ import './styles/calculator.css';
 import { calculateTdee, validateInput } from './calculator/engine';
 import { renderAdvancedPanel, updateAdvancedPanel } from './ui/advanced-panel';
 import { createDefaultInput, renderCalculatorForm } from './ui/calculator-form';
+import { initAdsense } from './ui/adsense';
 import { initFaqAccordion } from './ui/faq';
 import { renderResults } from './ui/results-panel';
 
@@ -65,3 +66,5 @@ document.getElementById('year')!.textContent = String(new Date().getFullYear());
 
 renderResults(resultsMount, null);
 updateAdvancedPanel(advancedMount, null, {});
+
+void initAdsense();
